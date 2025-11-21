@@ -56,7 +56,7 @@ with the generated name.
 
 _Default_: `undefined`
 
-### `generateSurName`
+### `generateSurname`
 
 Rolls on the appropriate roll table to find a random surname from the
 nationality provided.
@@ -152,5 +152,122 @@ with equal chances of getting `Masculine` or `Feminine`.
 
 A string of user IDs. If provided, a message will be whispered to these users
 with the generated name.
+
+_Default_: `undefined`
+
+### `generateShipName`
+
+Generates a reasonable ship name for the nationality specified.
+
+* For Spanish ships, we return an instance of the `SpanishShipName`
+  interface. All other nationalities return a string.
+
+#### Signature
+
+```typescript
+type Nationality = 'Spanish' | 'British' | 'French' | 'Dutch'
+
+interface SpanishShipName {
+  religious: string
+  secular: string
+}
+
+interface GenerateShipNameOptions {
+  nation: Nationality
+  naval: boolean
+  whisper?: string[]
+}
+
+async (options: GenerateShipNameOptions) => Promise<SpanishShipName | string>
+```
+
+#### Parameters
+
+##### `options.nation`
+
+Sets the nationality that the name should be taken from.
+
+_Default:_ Roll on the _Nationalities_ roll table included in the module. This
+reflects the relative dominance of each nation in the Caribbean during the
+Golden Age of Piracy. Spanish is the most common, British second, with French
+and Dutch less common.
+
+#### `options.naval`
+
+If `true`, we use naval roll tables, which are more likely to return names
+related to warfare or other martial pursuits. Otherwise, the ship is named
+as a civilian ship, with names that are more likely to be releated to
+trade and commerce.
+
+_Default_: `false`
+
+#### `options.whisper`
+
+A string of user IDs. If provided, a message will be whispered to these users
+with the generated name.
+
+_Default_: `undefined`
+
+### `rollTable`
+
+This method makes a roll on a given roll table and returns the results.
+
+#### Signature
+
+```typescript
+interface RollTableResult {
+  type?: string
+  img?: string
+  name?: string
+  description?: string
+}
+
+interface RollTableOptions {
+  displayChat?: boolean
+  recursive?: boolean
+  results?: documents.TableResult[]
+  roll?: Roll
+  rollMode?: string
+}
+
+async (id: string, options: RollTableOptions) => Promise<RollTableResult[]>
+```
+
+#### Parameters
+
+##### `id`
+
+The UUID of the table you want to roll on.
+
+##### `options.displayChat`
+
+Whether to automatically display the results in chat.
+
+_Default:_ `true`
+
+#### `options.recursive`
+
+Allow drawing recursively from inner RollTable results.
+
+_Default_: `true`
+
+#### `options.results`
+
+One or more table results which have been drawn.
+
+_Default_: `undefined`
+
+#### `options.roll`
+
+An existing Roll instance to use for drawing from the table.
+
+_Default_: `undefined`
+
+#### `options.rollMode`
+
+The chat roll mode to use when displaying the result.
+
+_Example:_ Provide `{ rollMode: 'whisper' }` to whisper the result to the
+current player.
 
 _Default_: `undefined`
