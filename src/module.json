@@ -1,7 +1,7 @@
 {
-  "id": "revolutionary-starter",
-  "title": "Foundry VTT Module Starter",
-  "description": "",
+  "id": "revolutionary-piratenames",
+  "title": "Pirate Name Generator",
+  "description": "This module provides roll tables, API methods, and macros to generate common Spanish, British, French, and Dutch names from the 18th century (the European imperial powers present in the Caribbean during the Golden Age of Piracy).",
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "13",
@@ -17,10 +17,28 @@
   "esmodules": [
     "scripts/module.js"
   ],
-  "styles": [
-    "styles/module.css"
+  "packs": [
+    {
+      "name": "piratenames-tables",
+      "label": "Pirate Name Roll Tables",
+      "path": "packs/rolltables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "piratenames-macros",
+      "label": "Pirate Name Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
   ],
-  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -28,16 +46,15 @@
       "path": "lang/en.json"
     }
   ],
-  "relationships": {},
   "includes": [],
   "socket": false,
   "url": "#{URL}#",
   "manifest": "#{MANIFEST}#",
   "download": "#{DOWNLOAD}#",
-  "bugs": "https://github.com/revolutionarygamesco/fvtt-starter/issues",
-  "changelog": "https://github.com/revolutionarygamesco/fvtt-starter/blob/main/CHANGELOG.md",
-  "license": "https://github.com/revolutionarygamesco/fvtt-starter/blob/main/LICENSE",
-  "readme": "https://github.com/revolutionarygamesco/fvtt-starter/blob/main/README.md",
+  "bugs": "https://github.com/revolutionarygamesco/piratenames/issues",
+  "changelog": "https://github.com/revolutionarygamesco/piratenames/blob/main/CHANGELOG.md",
+  "license": "https://github.com/revolutionarygamesco/piratenames/blob/main/LICENSE",
+  "readme": "https://github.com/revolutionarygamesco/piratenames/blob/main/README.md",
   "funding": [
     {
       "type": "patreon",
