@@ -1,6 +1,6 @@
 {
-  "name": "@revolutionarygamesco/fvttmod-starter",
-  "description": "A starting point for Foundry VTT modules.",
+  "name": "@revolutionarygamesco/piratenames",
+  "description": "A Foundry VTT module for generating Spanish, British, French, and Dutch names from the early 18th century.",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
