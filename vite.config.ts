@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import { copyFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'fs'
-import { join } from 'path'
+import { copyFileSync } from 'fs'
 
 export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        module: resolve(__dirname, 'src/scripts/module.ts'),
-        styles: resolve(__dirname, 'src/styles/module.scss')
+        module: resolve(__dirname, 'src/scripts/module.ts')
       },
       output: {
         dir: 'dist',
@@ -17,9 +15,6 @@ export default defineConfig({
           return chunkInfo.name === 'module' ? 'scripts/module.js' : '[name].js'
         },
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith('.css')) {
-            return 'styles/[name][extname]'
-          }
           return '[name][extname]'
         }
       }
