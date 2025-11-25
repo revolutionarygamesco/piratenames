@@ -21,8 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "esModuleInterop": true,
-    "types": ["fvtt-types"]
+    "esModuleInterop": true
   },
   "include": ["src/**/*", "vite.config.ts"]
 }
