@@ -1,0 +1,39 @@
+interface Collection<K, V> extends Map<K, V> {
+  find(predicate: (value: V, key: K, collection: this) => boolean): V | undefined
+  filter(predicate: (value: V, key: K, collection: this) => boolean): V[]
+  map<T>(callback: (value: V, key: K, collection: this) => T): T[]
+  some(predicate: (value: V, key: K, collection: this) => boolean): boolean
+  every(predicate: (value: V, key: K, collection: this) => boolean): boolean
+  reduce<T>(callback: (accumulator: T, value: V, key: K, collection: this) => T, initial: T): T
+  getName(name: string): V | undefined
+  contents: V[]
+}
+
+interface Module {
+  api: Record<string, Function>
+}
+
+declare const Hooks: {
+  on: (name: string, callback: (...args: any[]) => void) => number
+  once: (name: string, callback: (...args: any[]) => void) => number
+  off: (name: string, fn: number | Function) => void
+}
+
+declare const game: {
+  modules: Collection<string, Module>
+}
+
+interface RollTableResult {
+  type?: string
+  img?: string
+  name?: string
+  description?: string
+}
+
+interface RollTableOptions {
+  displayChat?: boolean
+  recursive?: boolean
+  results?: any
+  roll?: any
+  rollMode?: string
+}

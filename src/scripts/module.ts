@@ -1,9 +1,12 @@
-const moduleName = 'Module'
+import { MODULE_ID } from './settings'
 
-Hooks.on('init', () => {
-  console.log(`Initializing ${moduleName}...`)
-})
+import rollTable from './roll-table.ts'
 
-Hooks.on('ready', () => {
-  console.log(`${moduleName} is ready`)
+Hooks.once('init', async () => {
+  const crawl = game.modules.get(MODULE_ID)
+  if (!crawl) return
+
+  crawl.api = {
+    rollTable
+  }
 })

@@ -230,7 +230,7 @@ interface RollTableOptions {
   rollMode?: string
 }
 
-async (id: string, options: RollTableOptions) => Promise<RollTableResult[]>
+async (id: string, options?: RollTableOptions) => Promise<RollTableResult[]>
 ```
 
 #### Parameters
