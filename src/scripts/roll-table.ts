@@ -1,4 +1,4 @@
-import { wrapper } from './wrapper.ts'
+import { fromUuid } from './wrapper.ts'
 
 const reduceRollTableDraw = (orig: any): RollTableResult => {
   const obj: RollTableResult = {}
@@ -15,7 +15,7 @@ const rollTable = async (
   id: string,
   options?: RollTableOptions
 ): Promise<RollTableResult | null> => {
-  const table = await wrapper.fromUuid(id)
+  const table = await fromUuid(id)
   if (!table || typeof table.draw !== 'function') return null
   const { results } = await table.draw(options)
   return results.length > 0

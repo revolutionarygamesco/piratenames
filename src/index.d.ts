@@ -23,6 +23,10 @@ declare const game: {
   modules: Collection<string, Module>
 }
 
+type Nationality = 'Spanish' | 'British' | 'French' | 'Dutch'
+type Gender = 'Masculine' | 'Feminine' // It was a less enlightened age.
+
+
 interface RollTableResult {
   type?: string
   img?: string

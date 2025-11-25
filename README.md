@@ -20,7 +20,7 @@ nationality and gender provided.
 
 ```typescript
 type Nationality = 'Spanish' | 'British' | 'French' | 'Dutch'
-type Gender = 'Masculine' | 'Feminine' // It was a less enlightend age.
+type Gender = 'Masculine' | 'Feminine' // It was a less enlightened age.
 
 interface GenerateGivenNameOptions {
   nation: Nationality
@@ -119,7 +119,7 @@ _Mostly_ this is a matter of calling `generateGivenName`, then
 
 ```typescript
 type Nationality = 'Spanish' | 'British' | 'French' | 'Dutch'
-type Gender = 'Masculine' | 'Feminine' // It was a less enlightend age.
+type Gender = 'Masculine' | 'Feminine' // It was a less enlightened age.
 
 interface GenerateNameOptions {
   nation: Nationality
