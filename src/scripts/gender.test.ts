@@ -1,0 +1,31 @@
+import pickGender, { isGender, genders } from './gender.ts'
+
+jest.mock('./wrapper.ts', () => ({
+  fromUuid: jest.fn().mockResolvedValue({ draw: async () => { return { results: [{ name: 'Feminine' }] } } })
+}))
+
+describe('isGender', () => {
+  it.each([
+    ['undefined', undefined],
+    ['null', null],
+    ['functions', () => {}],
+    ['true', true],
+    ['false', false],
+    ['numbers', 42],
+    ['a random string', 'German'],
+    ['an array', []],
+    ['an object', {}]
+  ] as [string, any][])('rejects %s', (_desc: string, candidate: any) => {
+    expect(isGender(candidate)).toBe(false)
+  })
+
+  it.each(genders)('accepts %s', (gender: Gender) => {
+    expect(isGender(gender)).toBe(true)
+  })
+})
+
+describe('pickGender', () => {
+  it('picks a gender', async () => {
+    expect(await pickGender()).toBe('Feminine')
+  })
+})
