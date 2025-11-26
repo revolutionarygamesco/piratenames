@@ -5,6 +5,7 @@ import generateGivenName from './given.ts'
 import generateSurname from './surname.ts'
 import generateName from './full.ts'
 import generateShipName from './ship.ts'
+import openGenerateNameDialog from './dialog.ts'
 
 Hooks.once('init', async () => {
   const crawl = game.modules.get(MODULE_ID)
@@ -15,6 +16,7 @@ Hooks.once('init', async () => {
     generateGivenName,
     generateSurname,
     generateName,
-    generateShipName
+    generateShipName,
+    openGenerateNameDialog
   }
 })

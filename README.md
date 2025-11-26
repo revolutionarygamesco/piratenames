@@ -208,6 +208,28 @@ with the generated name.
 
 _Default_: `undefined`
 
+### `openGenerateNameDialog`
+
+This method opens a dialog that allows a user to select the parameters for generating a new name.
+
+#### Signature
+
+```typescript
+async (onComplete?: (nation: string, type: string) => Promise<void>) => Promise<void>
+```
+
+#### Parameters
+
+##### `onComplete`
+
+This is the method that will be called when the user clicks on the
+**Generate Name** button.
+
+_Default:_ By default, we provide a method that selects one of the above API
+methods depending on user selection and whispers the generated name to
+`game.user.id`. In most cases, this is the expected behavior, but you can
+override this if necessary.
+
 ### `rollTable`
 
 This method makes a roll on a given roll table and returns the results.

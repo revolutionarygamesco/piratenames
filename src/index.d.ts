@@ -2,6 +2,19 @@ declare class ChatMessage {
   create(data?: any, operation?: any): Promise<any>
 }
 
+declare class ApplicationV2 {
+  render: (options: boolean) => Promise<ApplicationV2>
+  close: (options?: any) => Promise<ApplicationV2>
+  _onRender(context: any, options: any): Promise<void>
+  _onClose(options: any): void
+}
+
+declare class DialogV2 extends ApplicationV2 {
+  element: HTMLElement
+  constructor(options?: any)
+  close: (options?: any) => Promise<DialogV2>
+}
+
 interface Collection<K, V> extends Map<K, V> {
   find(predicate: (value: V, key: K, collection: this) => boolean): V | undefined
   filter(predicate: (value: V, key: K, collection: this) => boolean): V[]
@@ -11,6 +24,10 @@ interface Collection<K, V> extends Map<K, V> {
   reduce<T>(callback: (accumulator: T, value: V, key: K, collection: this) => T, initial: T): T
   getName(name: string): V | undefined
   contents: V[]
+}
+
+interface User {
+  id: string
 }
 
 interface Module {
@@ -28,10 +45,16 @@ declare const game: {
     format: (key: string, data?: Record<string, any>) => string
     localize: (key: string) => string
   },
-  modules: Collection<string, Module>
+  modules: Collection<string, Module>,
+  user: User
 }
 
 declare const foundry: {
+  applications: {
+    api: {
+      DialogV2: typeof DialogV2
+    }
+  }
   documents: {
     ChatMessage: ChatMessage
   }
@@ -57,8 +80,8 @@ interface RollTableOptions {
 }
 
 interface GenerateShipNameOptions {
-  nation: Nationality
-  naval: boolean
+  nation?: Nationality
+  naval?: boolean
   whisper?: string[]
 }
 

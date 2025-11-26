@@ -8,6 +8,35 @@
         "ship": "Draws a {nation} ship name."
       },
       "speaker": "Pirate Name Generator"
+    },
+    "dialog": {
+      "title": "Pirate Name Generator",
+      "nationalities": {
+        "label": "Nationality",
+        "hint": "What nationality should this name come from?",
+        "options": {
+          "Spanish": "Spanish",
+          "British": "British",
+          "French": "French",
+          "Dutch": "Dutch",
+          "Random": "Randomize"
+        }
+      },
+      "type": {
+        "label": "Type",
+        "hint": "What type of name would you like to generate?",
+        "options": {
+          "Masculine": "Masculine personal name",
+          "Feminine": "Feminine personal name",
+          "Random": "Personal name (random gender)",
+          "Merchant": "Merchantman name",
+          "Naval": "Man-of-war name"
+        }
+      },
+      "actions": {
+        "generate": "Generate Name",
+        "cancel": "Cancel"
+      }
     }
   }
 }
