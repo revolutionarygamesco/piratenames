@@ -9,7 +9,7 @@ export const isNationality = (candidate: unknown): candidate is Nationality => {
 }
 
 const pickNationality = async (): Promise<Nationality> => {
-  const drawn = await rollTable(otherTables.nationalities)
+  const drawn = await rollTable(otherTables.nationalities, { displayChat: false })
   const name = drawn?.name
   return isNationality(name) ? name : 'Spanish'
 }

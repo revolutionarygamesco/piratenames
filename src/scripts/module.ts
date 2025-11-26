@@ -3,6 +3,7 @@ import { MODULE_ID } from './settings'
 import rollTable from './roll-table.ts'
 import generateGivenName from './given.ts'
 import generateSurname from './surname.ts'
+import generateName from './full.ts'
 
 Hooks.once('init', async () => {
   const crawl = game.modules.get(MODULE_ID)
@@ -11,6 +12,7 @@ Hooks.once('init', async () => {
   crawl.api = {
     rollTable,
     generateGivenName,
-    generateSurname
+    generateSurname,
+    generateName
   }
 })

@@ -9,7 +9,7 @@ export const isGender = (candidate: unknown): candidate is Gender => {
 }
 
 const pickGender = async (): Promise<Gender> => {
-  const drawn = await rollTable(otherTables.genders)
+  const drawn = await rollTable(otherTables.genders, { displayChat: false })
   const name = drawn?.name
   return isGender(name) ? name : 'Masculine'
 }
