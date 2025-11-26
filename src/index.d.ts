@@ -41,3 +41,14 @@ interface RollTableOptions {
   roll?: any
   rollMode?: string
 }
+
+interface GenerateShipNameOptions {
+  nation: Nationality
+  naval: boolean
+  whisper?: string[]
+}
+
+interface SpanishShipName {
+  religious: string
+  secular: string
+}

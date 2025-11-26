@@ -4,6 +4,7 @@ import rollTable from './roll-table.ts'
 import generateGivenName from './given.ts'
 import generateSurname from './surname.ts'
 import generateName from './full.ts'
+import generateShipName from './ship.ts'
 
 Hooks.once('init', async () => {
   const crawl = game.modules.get(MODULE_ID)
@@ -13,6 +14,7 @@ Hooks.once('init', async () => {
     rollTable,
     generateGivenName,
     generateSurname,
-    generateName
+    generateName,
+    generateShipName
   }
 })
