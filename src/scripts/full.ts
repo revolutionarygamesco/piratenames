@@ -2,6 +2,9 @@ import pickNationality from './nationality.ts'
 import pickGender from './gender.ts'
 import generateGivenName from './given.ts'
 import generateSurname from './surname.ts'
+import whisperMessage from './whisper.ts'
+import {localize} from './wrapper.ts'
+import {MODULE_ID} from './settings.ts'
 
 const jeanable = ['Baptiste', 'Paul', 'Pierre', 'Louis', 'Claude', 'François',
   'Jacques', 'Charles', 'Michel', 'Joseph', 'Marc', 'Luc', 'Philippe',
@@ -30,7 +33,8 @@ const generateFullSpanishSurname = async (): Promise<string> => {
 
 const generateName = async (
   nationality?: Nationality,
-  gender?: Gender
+  gender?: Gender,
+  whisper?: string[]
 ): Promise<string> => {
   const n = nationality ?? await pickNationality()
   const g = gender ?? await pickGender()
@@ -43,7 +47,13 @@ const generateName = async (
   if (n === 'French' && jeanable.includes(given) && check()) given = `Jean-${given}`
   if (n === 'Dutch' && check()) surname = await generateDutchPatronym(g)
 
-  return `${given} ${surname}`.replace(/<[^>]*>/g, '')
+  const name = `${given} ${surname}`.replace(/<[^>]*>/g, '')
+  if (whisper) {
+    const flavor = localize(`${MODULE_ID}.message.flavor.full`, { gender: g.toLocaleLowerCase(), nation: n })
+    await whisperMessage(whisper, flavor, name)
+  }
+
+  return name
 }
 
 export default generateName

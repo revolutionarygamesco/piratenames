@@ -1,0 +1,13 @@
+{
+  "revolutionary-piratenames": {
+    "message": {
+      "flavor": {
+        "given": "Draws a {gender} {nation} given name.",
+        "surname": "Draws a {nation} surname.",
+        "full": "Draws a {gender} {nation} name.",
+        "ship": "Draws a {nation} ship name."
+      },
+      "speaker": "Pirate Name Generator"
+    }
+  }
+}

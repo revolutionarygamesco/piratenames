@@ -1,13 +1,24 @@
 import { surnames } from '../ids.ts'
 import pickNationality from './nationality.ts'
 import rollTable from './roll-table.ts'
+import whisperMessage from './whisper.ts'
+import {localize} from './wrapper.ts'
+import {MODULE_ID} from './settings.ts'
 
 const generateSurname = async (
-  nationality?: Nationality
+  nationality?: Nationality,
+  whisper?: string[]
 ): Promise<string> => {
   const n = nationality ?? await pickNationality()
   const drawn = await rollTable(surnames[n], { displayChat: false })
-  return drawn?.description ?? 'Smith'
+  const name = drawn?.description ?? 'Smith'
+
+  if (whisper) {
+    const flavor = localize(`${MODULE_ID}.message.flavor.surname`, { nation: n })
+    await whisperMessage(whisper, flavor, name)
+  }
+
+  return name
 }
 
 export default generateSurname

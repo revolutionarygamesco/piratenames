@@ -1,3 +1,7 @@
+declare class ChatMessage {
+  create(data?: any, operation?: any): Promise<any>
+}
+
 interface Collection<K, V> extends Map<K, V> {
   find(predicate: (value: V, key: K, collection: this) => boolean): V | undefined
   filter(predicate: (value: V, key: K, collection: this) => boolean): V[]
@@ -20,7 +24,17 @@ declare const Hooks: {
 }
 
 declare const game: {
+  i18n: {
+    format: (key: string, data?: Record<string, any>) => string
+    localize: (key: string) => string
+  },
   modules: Collection<string, Module>
+}
+
+declare const foundry: {
+  documents: {
+    ChatMessage: ChatMessage
+  }
 }
 
 type Nationality = 'Spanish' | 'British' | 'French' | 'Dutch'
