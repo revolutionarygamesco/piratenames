@@ -1,4 +1,4 @@
-import ids from '../ids.ts'
+import { otherTables } from '../ids.ts'
 import rollTable from './roll-table.ts'
 
 export const nationalities: Nationality[] = ['Spanish', 'British', 'French', 'Dutch']
@@ -9,7 +9,7 @@ export const isNationality = (candidate: unknown): candidate is Nationality => {
 }
 
 const pickNationality = async (): Promise<Nationality> => {
-  const drawn = await rollTable(ids.nationality)
+  const drawn = await rollTable(otherTables.nationalities)
   const name = drawn?.name
   return isNationality(name) ? name : 'Spanish'
 }

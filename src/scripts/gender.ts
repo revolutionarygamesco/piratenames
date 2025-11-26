@@ -1,4 +1,4 @@
-import ids from '../ids.ts'
+import { otherTables } from '../ids.ts'
 import rollTable from './roll-table.ts'
 
 export const genders: Gender[] = ['Feminine', 'Masculine']
@@ -9,7 +9,7 @@ export const isGender = (candidate: unknown): candidate is Gender => {
 }
 
 const pickGender = async (): Promise<Gender> => {
-  const drawn = await rollTable(ids.gender)
+  const drawn = await rollTable(otherTables.genders)
   const name = drawn?.name
   return isGender(name) ? name : 'Masculine'
 }
