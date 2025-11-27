@@ -39,6 +39,16 @@
       }
     }
   ],
+  "packFolders": [
+    {
+      "name": "Pirate Name Generator",
+      "sorting": "a",
+      "packs": [
+        "piratenames-tables",
+        "piratenames-macros"
+      ]
+    }
+  ],
   "languages": [
     {
       "lang": "en",
