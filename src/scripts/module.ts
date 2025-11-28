@@ -8,10 +8,10 @@ import generateShipName from './ship.ts'
 import openGenerateNameDialog from './dialog.ts'
 
 Hooks.once('init', async () => {
-  const crawl = game.modules.get(MODULE_ID)
-  if (!crawl) return
+  const generator = game.modules.get(MODULE_ID)
+  if (!generator) return
 
-  crawl.api = {
+  generator.api = {
     rollTable,
     generateGivenName,
     generateSurname,
