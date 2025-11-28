@@ -4,6 +4,10 @@ env:
   project_url: "https://github.com/${{github.repository}}"
   latest_manifest_url: "https://github.com/${{github.repository}}/releases/latest/download/module.json"
   release_module_url: "https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip"
+  bugs_url: "https://github.com/${{github.repository}}/issues"
+  changelog_url: "https://github.com/${{github.repository}}/blob/main/CHANGELOG.md"
+  license_url: "https://github.com/${{github.repository}}/blob/main/LICENSE"
+  readme_url: "https://github.com/${{github.repository}}/blob/main/README.md"
 
 on:
   release:
@@ -49,6 +53,10 @@ jobs:
           url: ${{ env.project_url }}
           manifest: ${{ env.latest_manifest_url }}
           download: ${{ env.release_module_url }}
+          bugs: ${{ env.bugs_url }}
+          changelog: ${{ env.changelog_url }}
+          license: ${{ env.license_url }}
+          readme: ${{ env.readme_url }}
 
       - name: Zip Files
         working-directory: ./dist
