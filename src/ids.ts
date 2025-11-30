@@ -4,8 +4,8 @@ export const givenNames: Record<Nationality, Record<Gender, string>> = {
     Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.3auqdwjOBeCF6uzA'
   },
   British: {
-    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.rPQW2jBoqSwIrxIQ',
-    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.4GZWNpzu1WESf9ni'
+    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.hrbRG1yhzEnZxzpw',
+    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.aSMzQAWvvUQSTDz1'
   },
   French: {
     Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.aFmWKPGZB5IoTMsK',
@@ -45,6 +45,6 @@ export const shipNames: Record<Nationality, Record<string, string>> = {
 }
 
 export const otherTables: Record<string, string> = {
-  nationalities: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.WBDDsvsA9tQBDKiF',
-  genders: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.gnMiX5FE6YAZhNEV'
+  nationalities: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.zB1s5c7XJ8olrgMM',
+  genders: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.v1XUmF7BNdElQEAP'
 }
