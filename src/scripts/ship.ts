@@ -1,9 +1,9 @@
+import { MODULE_ID } from './settings.ts'
 import { shipNames } from '../ids.ts'
+import { localize } from './wrapper.ts'
 import pickNationality from './nationality.ts'
 import rollTable from './roll-table.ts'
 import whisperMessage from './whisper.ts'
-import {localize} from './wrapper.ts'
-import {MODULE_ID} from './settings.ts'
 
 const getType = (options?: GenerateShipNameOptions): 'Merchant' | 'Naval' => {
   return options?.naval === true ? 'Naval' : 'Merchant'
