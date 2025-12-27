@@ -35,7 +35,7 @@ const openGenerateNameDialog = async (
   }).join('\n')
 
   const dialog = new foundry.applications.api.DialogV2({
-    id: `${MODULE_ID}-add-exploit`,
+    id: `${MODULE_ID}-generate-name`,
     window: { title },
     position: { width: 500 },
     content: `
