@@ -25,7 +25,7 @@ const generateSpanishShipName = async (options?: GenerateShipNameOptions): Promi
   }
 }
 
-const generatePirateShipName = async (options?: GenerateShipNameOptions): Promise<string> => {
+const generatePirateShipName = async (options?: GeneratePirateShipNameOptions): Promise<string> => {
   const drawn = await rollTable(shipNames.Pirate, { displayChat: false })
   const name = drawn?.description ?? 'Revenge'
 

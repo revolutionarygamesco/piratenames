@@ -79,6 +79,10 @@ interface RollTableOptions {
   rollMode?: string
 }
 
+interface GeneratePirateShipNameOptions {
+  whisper?: string[]
+}
+
 interface GenerateShipNameOptions {
   nation?: Nationality
   naval?: boolean
