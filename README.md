@@ -5,9 +5,26 @@
 ![Test Status](https://img.shields.io/github/actions/workflow/status/revolutionarygamesco/piratenames/test.yml?label=Test+status&style=for-the-badge)
 ![License](https://img.shields.io/github/license/revolutionarygamesco/piratenames?style=for-the-badge)
 
-This module provides roll tables, API methods, and macros to generate common
-Spanish, British, French, and Dutch names from the 18th century (the European
-imperial powers present in the Caribbean during the Golden Age of Piracy).
+The right name can do so much to fill in a rich setting. You don’t want a
+French captain named “Bob,” and it won’t do to call every ship in the Spanish
+Royal Armada the _Santa Maria_, but coming up with unique, evocative names
+off the cuff at the table isn’t easy. If you’re running a game set in the
+Caribbean during the Golden Age of Piracy (1650-1730 CE), this module might
+help you out.
+
+* Generate personal names that fit Spanish, British, French, or Dutch naming conventions.
+* Generate ship names for Spanish ships, British ships, French ships, Dutch ships, and pirate ships.
+  * Naval ship names are more likely to reflect martial or warlike themes
+  * Merchant ship names are more likely to espouse economic ambitions
+  * Pirate ship names are more likely to reflect themes of vengeance and rebellion
+
+## Includes
+
+* **212 rollable tables** so you can repurpose them as needed (e.g., ship names often reuse the personal names table).
+* **2 macros** to make it easy to use.
+  * **Generate Name** opens a dialog so that you can set the parameters you’d like for the name to generate (or leave them up to chance). The name is then whispered to you in the chat.
+  * **Generate Pirate Ship Name** rolls a pirate ship name and whispers it to you in the chat (since pirate ship names work a little differently).
+* **7 API methods** so you can build on top of this for your own modules.
 
 ## API
 
@@ -200,6 +217,29 @@ as a civilian ship, with names that are more likely to be releated to
 trade and commerce.
 
 _Default_: `false`
+
+#### `options.whisper`
+
+A string of user IDs. If provided, a message will be whispered to these users
+with the generated name.
+
+_Default_: `undefined`
+
+### `generatePirateShipName`
+
+Generates a random pirate ship name.
+
+#### Signature
+
+```typescript
+interface GeneratePirateShipNameOptions {
+  whisper?: string[]
+}
+
+async (options: GeneratePirateShipNameOptions) => Promise<string>
+```
+
+#### Parameters
 
 #### `options.whisper`
 
