@@ -24,7 +24,7 @@ export const surnames: Record<Nationality, string> = {
   Dutch: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.O7SzIfgGvASHAqCc'
 }
 
-export const shipNames: Record<Nationality, Record<string, string>> = {
+export const shipNames: Record<Nationality, Record<string, string>> & { Pirate: string } = {
   Spanish: {
     Religious: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.Fn4TeNwEZoZV2gXd',
     Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.lUWNYPUQ00zOSIAP',
@@ -41,7 +41,8 @@ export const shipNames: Record<Nationality, Record<string, string>> = {
   Dutch: {
     Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.DqNXgJXlhRghfnXV',
     Naval: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.mMjZBr0BmbeKmu3d'
-  }
+  },
+  Pirate: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.DAo592taFBug1OKc'
 }
 
 export const otherTables: Record<string, string> = {

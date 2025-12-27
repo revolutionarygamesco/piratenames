@@ -4,7 +4,7 @@ import rollTable from './roll-table.ts'
 import generateGivenName from './given.ts'
 import generateSurname from './surname.ts'
 import generateName from './full.ts'
-import generateShipName from './ship.ts'
+import generateShipName, { generatePirateShipName } from './ship.ts'
 import openGenerateNameDialog from './dialog.ts'
 
 Hooks.once('init', async () => {
@@ -17,6 +17,7 @@ Hooks.once('init', async () => {
     generateSurname,
     generateName,
     generateShipName,
+    generatePirateShipName,
     openGenerateNameDialog
   }
 })
