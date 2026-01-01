@@ -1,6 +1,0 @@
-2025/11/30-15:29:37.013203 314be2000 Delete type=3 #54
-2025/11/30-16:51:38.601083 30e2d3000 Level-0 table #62: started
-2025/11/30-16:51:38.601336 30e2d3000 Level-0 table #62: 0 bytes OK
-2025/11/30-16:51:38.601537 30e2d3000 Delete type=0 #60
-2025/11/30-16:51:38.603183 30e2d3000 Manual compaction at level-0 from '!folders!06n5L1ihTVNT4hBk' @ 72057594037927935 : 1 .. '!tables.results!zkFjwB1bXFYrweEB.xbSlDdGPliLbVpI9' @ 0 : 0; will stop at (end)
-2025/11/30-16:51:38.603223 30e2d3000 Manual compaction at level-1 from '!folders!06n5L1ihTVNT4hBk' @ 72057594037927935 : 1 .. '!tables.results!zkFjwB1bXFYrweEB.xbSlDdGPliLbVpI9' @ 0 : 0; will stop at (end)
