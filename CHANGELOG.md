@@ -1,3 +1,6 @@
+### 1.0.1
+- We now extract compendium data using the Foundry VTT CLI, commit that to git, and add a packing step (again using the Foundry VTT CLI) to our build process.
+
 ### 1.0.0
 * 176 rollable tables for generating personal and ship names from the major European powers active in the Caribbean during the Golden Age of Piracy (the Spanish Empire, the British Empire, the Kingdom of France, and the Dutch West India Company).
 * A **Generate Name** macro that provides a UI for users to generate names for people and ships, which are whispered to that user.
