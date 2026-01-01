@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json && vite build",
     "unpack": "node ./scripts/unpack.js",
+    "pack": "node ./scripts/pack.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
