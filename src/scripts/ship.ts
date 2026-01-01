@@ -25,6 +25,18 @@ const generateSpanishShipName = async (options?: GenerateShipNameOptions): Promi
   }
 }
 
+const generatePirateShipName = async (whisper: string[] = []): Promise<string> => {
+  const drawn = await rollTable(shipNames.Pirate, { displayChat: false })
+  const name = drawn?.description ?? 'Revenge'
+
+  if (whisper.length > 0) {
+    const flavor = localize(`${MODULE_ID}.message.flavor.ship`, { nation: 'pirate' })
+    await whisperMessage(whisper, flavor, name)
+  }
+
+  return name
+}
+
 const generateShipName = async (options?: GenerateShipNameOptions): Promise<string | SpanishShipName> => {
   const n = options?.nation ?? await pickNationality()
   const name = n === 'Spanish'
@@ -43,3 +55,4 @@ const generateShipName = async (options?: GenerateShipNameOptions): Promise<stri
 }
 
 export default generateShipName
+export { generatePirateShipName }
