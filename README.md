@@ -208,6 +208,25 @@ with the generated name.
 
 _Default_: `undefined`
 
+### `generatePirateShipName`
+
+Generates a pirate ship name.
+
+#### Signature
+
+```typescript
+async (whisper: string[] = []) => Promise<string>
+```
+
+#### Parameters
+
+#### `whisper`
+
+A string of user IDs. If provided, a message will be whispered to these users
+with the generated name.
+
+_Default_: `[]`
+
 ### `openGenerateNameDialog`
 
 This method opens a dialog that allows a user to select the parameters for generating a new name.
