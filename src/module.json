@@ -19,7 +19,7 @@
   ],
   "packs": [
     {
-      "name": "piratenames-tables",
+      "name": "rolltables",
       "label": "Pirate Name Roll Tables",
       "path": "packs/rolltables",
       "type": "RollTable",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "name": "piratenames-macros",
+      "name": "macros",
       "label": "Pirate Name Macros",
       "path": "packs/macros",
       "type": "Macro",
@@ -44,8 +44,8 @@
       "name": "Pirate Name Generator",
       "sorting": "a",
       "packs": [
-        "piratenames-tables",
-        "piratenames-macros"
+        "rolltables",
+        "macros"
       ]
     }
   ],
