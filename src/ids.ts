@@ -1,50 +1,50 @@
 export const givenNames: Record<Nationality, Record<Gender, string>> = {
   Spanish: {
-    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.vqZvraZ0rXAjIBzK',
-    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.3auqdwjOBeCF6uzA'
+    Feminine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.vqZvraZ0rXAjIBzK',
+    Masculine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.3auqdwjOBeCF6uzA'
   },
   British: {
-    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.hrbRG1yhzEnZxzpw',
-    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.aSMzQAWvvUQSTDz1'
+    Feminine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.hrbRG1yhzEnZxzpw',
+    Masculine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.aSMzQAWvvUQSTDz1'
   },
   French: {
-    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.aFmWKPGZB5IoTMsK',
-    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.Ei8dDYiw4SB27YB0'
+    Feminine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.aFmWKPGZB5IoTMsK',
+    Masculine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.Ei8dDYiw4SB27YB0'
   },
   Dutch: {
-    Feminine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.fnbsMLjOBf8qdyN4',
-    Masculine: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.bPw3LQSI57PLWJX9'
+    Feminine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.fnbsMLjOBf8qdyN4',
+    Masculine: 'Compendium.revolutionary-piratenames.rolltables.RollTable.bPw3LQSI57PLWJX9'
   }
 }
 
 export const surnames: Record<Nationality, string> = {
-  Spanish: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.E242xLYYiKEws75V',
-  British: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.Sp0FfupHVKM2O6DZ',
-  French: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.0PoHJ1aYEB9Yf728',
-  Dutch: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.O7SzIfgGvASHAqCc'
+  Spanish: 'Compendium.revolutionary-piratenames.rolltables.RollTable.E242xLYYiKEws75V',
+  British: 'Compendium.revolutionary-piratenames.rolltables.RollTable.Sp0FfupHVKM2O6DZ',
+  French: 'Compendium.revolutionary-piratenames.rolltables.RollTable.0PoHJ1aYEB9Yf728',
+  Dutch: 'Compendium.revolutionary-piratenames.rolltables.RollTable.O7SzIfgGvASHAqCc'
 }
 
 export const shipNames: Record<Nationality, Record<string, string>> = {
   Spanish: {
-    Religious: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.Fn4TeNwEZoZV2gXd',
-    Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.lUWNYPUQ00zOSIAP',
-    Naval: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.8aMg2fkRkX8Gnjmz'
+    Religious: 'Compendium.revolutionary-piratenames.rolltables.RollTable.Fn4TeNwEZoZV2gXd',
+    Merchant: 'Compendium.revolutionary-piratenames.rolltables.RollTable.lUWNYPUQ00zOSIAP',
+    Naval: 'Compendium.revolutionary-piratenames.rolltables.RollTable.8aMg2fkRkX8Gnjmz'
   },
   British: {
-    Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.aZK5OtHswteWMHGE',
-    Naval: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.EahUnhxUbipKWkUB'
+    Merchant: 'Compendium.revolutionary-piratenames.rolltables.RollTable.aZK5OtHswteWMHGE',
+    Naval: 'Compendium.revolutionary-piratenames.rolltables.RollTable.EahUnhxUbipKWkUB'
   },
   French: {
-    Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.YUsZW4uJi0vaWUBx',
-    Naval: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.oMpo7YaOXzZ3yzH8'
+    Merchant: 'Compendium.revolutionary-piratenames.rolltables.RollTable.YUsZW4uJi0vaWUBx',
+    Naval: 'Compendium.revolutionary-piratenames.rolltables.RollTable.oMpo7YaOXzZ3yzH8'
   },
   Dutch: {
-    Merchant: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.DqNXgJXlhRghfnXV',
-    Naval: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.mMjZBr0BmbeKmu3d'
+    Merchant: 'Compendium.revolutionary-piratenames.rolltables.RollTable.DqNXgJXlhRghfnXV',
+    Naval: 'Compendium.revolutionary-piratenames.rolltables.RollTable.mMjZBr0BmbeKmu3d'
   }
 }
 
 export const otherTables: Record<string, string> = {
-  nationalities: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.zB1s5c7XJ8olrgMM',
-  genders: 'Compendium.revolutionary-piratenames.piratenames-tables.RollTable.v1XUmF7BNdElQEAP'
+  nationalities: 'Compendium.revolutionary-piratenames.rolltables.RollTable.zB1s5c7XJ8olrgMM',
+  genders: 'Compendium.revolutionary-piratenames.rolltables.RollTable.v1XUmF7BNdElQEAP'
 }
